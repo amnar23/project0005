@@ -1,26 +1,16 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import './index.css';
+import React,{useState} from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+function Room() {
+  const [isLit,setLit]=useState(true);
+  const [count,setCount]=useState(0);
+  const brightness = isLit ? "lit" : "dark";
+  return <div className={`room ${brightness}`}>
+    <h2>The room is {brightness}</h2><br/>
+    <button className='button-design' onClick={()=>{setLit(!isLit);setCount(count+1);}}>FLIP</button>
+    <p>Button is clicked {count} times</p>
+  </div>
 }
 
-export default App;
+export default Room;

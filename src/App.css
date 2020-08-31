@@ -1,3 +1,9 @@
+
+html, body, #root, .room {
+  height: 100%;
+  margin: 0;
+  text-align: center;
+}
 .App {
   text-align: center;
 }
@@ -35,4 +41,12 @@
   to {
     transform: rotate(360deg);
   }
+}
+.button-design
+{
+  padding: 1%;
+  border-color:yellow;
+  background-color: green;
+  color:yellow;
+  border-style: dotted;
 }
